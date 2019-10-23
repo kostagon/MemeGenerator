@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,18 @@
     <title>Meme Generator | KG</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    
-    <script src="js/main.js"></script>
+
+<body onload="initCanvas()">
+    <section class="meme-editor">
+        <input type="text" name="topText" id="topText" onkeyup="onChangeText(this.value)" placeholder="Top Text" />
+        <canvas class="main-canvas" style="max-width:400px; max-height:400px"></canvas>
+    </section>
+    <section class="image-gallery flex">
+        <img src="images/meme-images/1.jpg" data-id="1" onclick="onChangeImage(this)" alt="" srcset="">
+        <img src="images/meme-images/2.jpg" data-id="2" onclick="onChangeImage(this)" alt="" srcset="">
+    </section>
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,26 @@
 /* Base */
-
-html {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+input {
+    padding: 7px;
+    margin: 7px;
 }
 
 /* Header */
 
 /* Main */
 
+.image-gallery img {
+    margin: 5px;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;    
+}
+
 /* Helpers */
+
+.flex {
+    display: flex;
+}
+
+.object-fit {
+    object-fit: cover;
+}
