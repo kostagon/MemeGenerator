@@ -45,8 +45,8 @@ function renderImage(image, currMeme) {
             gCtx.strokeText(item.line, 10, pos);
         }
         if (idx) {
-            gCtx.fillText(item.line, 10, pos);
-            gCtx.strokeText(item.line, 10, pos);
+            gCtx.fillText(item.line, 10, gCanvas.height - item.size / 2);
+            gCtx.strokeText(item.line, 10, gCanvas.height - item.size / 2);
         }
         gCtx.fill();
         gCtx.stroke();
