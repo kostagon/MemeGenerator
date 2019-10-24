@@ -1,7 +1,7 @@
 'use strict';
-
+let gCurrId = localStorage.getItem('curr-img-id');
 let gMeme = {
-    selectedImgId: 1,
+    selectedImgId: gCurrId,
     selectedTxtIdx: 0,
     txts: [{
             line: 'Top Text',

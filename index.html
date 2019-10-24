@@ -9,43 +9,33 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onload="initCanvas()">
-    <section class="meme-editor flex ml100">
-        <canvas class="main-canvas" style="max-width:400px; max-height:400px"></canvas>
-        <div class="prefs ml100">
-            <input type="text" name="text" id="text" onkeyup="onChangeText(this.value)"
-                placeholder="Enter Text" />
-            <div class="btn-container flex space-around">
-                <a class="manipulate-btn">
-                    <img src="./images/icons/increase-font.png" data-type="increase" onclick="onManipulateText(this)"
-                        alt="" srcset="">
-                </a>
-                <a class="manipulate-btn">
-                    <img src="./images/icons/decrease-font.png" data-type="decrease" onclick="onManipulateText(this)"
-                        alt="" srcset="">
-                </a>
-                <a class="manipulate-btn">
-                    <img src="./images/icons/arrows-down.png" data-type="move-down" onclick="onManipulateText(this)"
-                        alt="" srcset="">
-                </a>
-                <a class="manipulate-btn">
-                    <img src="./images/icons/arrows-up.png" data-type="move-up" onclick="onManipulateText(this)"
-                        alt="" srcset="">
-                </a>
-                <a class="manipulate-btn">
-                    <img src="./images/icons/up-and-down-opposite-double-arrows-side-by-side.png"
-                        data-type="switch-line" class="line-switcher" onclick="onManipulateLines()" alt="" srcset="">
-                </a>
-            </div>
-        </div>
+<body onload="renderGallery()">
+    <header class="flex space-between align-center">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo/LOGO.png" alt="" srcset="">
+            </a>
 
+        </div>
+        <nav class="header-nav">
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <section class="image-gallery grid">
+            <!-- <img src="images/meme-images/1.jpg" data-id="1" onclick="onChangeImage(this)" alt="" srcset=""> -->
     </section>
-    <section class="image-gallery flex ml100">
-        <img src="images/meme-images/1.jpg" data-id="1" onclick="onChangeImage(this)" alt="" srcset="">
-        <img src="images/meme-images/2.jpg" data-id="2" onclick="onChangeImage(this)" alt="" srcset="">
-    </section>
-    <script src="js/meme-service.js"></script>
-    <script src="js/meme-controller.js"></script>
+
+    <footer class="flex justify-center">
+        <div class="logo">
+            <a href="index.html" target="_blank">
+                <img src="./images/logo/LOGO.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="flex justify-end">by Kosta Goncharov &copy;</div>
+    </footer>
+    <script src="js/gallery-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
 </body>
 
 </html>

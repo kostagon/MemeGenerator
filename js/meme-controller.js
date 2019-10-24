@@ -31,7 +31,7 @@ function onChangeImage(val) {
 }
 
 function renderImage(image, currMeme) {
-    let selectedTxtIdx = currMeme.selectedTxtIdx;
+    // let selectedTxtIdx = currMeme.selectedTxtIdx;
 
     gCtx.drawImage(image, 0, 0);
     currMeme.txts.forEach((item, idx) => {

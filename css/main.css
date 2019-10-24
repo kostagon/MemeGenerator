@@ -1,4 +1,8 @@
 /* Base */
+html{
+    padding: 0;
+    margin: 0;
+}
 
 body {
     margin: 0;
@@ -7,6 +11,25 @@ body {
 
 /* Header */
 
+header {
+    height: 61px;
+    background-color: black;
+}
+
+.header-nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #c3fe0d;
+}
+
+.header-nav a:hover {
+    box-shadow: 0 4px 1px 0px #c3fe0d;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
 /* Main */
 
 .meme-editor {
@@ -14,7 +37,16 @@ body {
 }
 
 .image-gallery {
-    margin: 5px;
+    grid-template-columns: repeat(auto-fit, 205px);
+    justify-content: center;
+}
+
+.image-gallery:nth-last-child(-n+5) {
+    margin-bottom: 5px;
+}
+
+.gallery-item {
+    margin-top: 5px;
 }
 
 .image-gallery img {
@@ -23,55 +55,17 @@ body {
     height: 200px;
 }
 
-.image-gallery img:not(:last-child) {
-    margin-right: 5px;
-}
+/* Footer */
 
-
-/* Buttons and Inputs */
-
-input {
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    border: 1px solid darkmagenta;
-}
-
-input::placeholder {
-    color: black;
-    opacity: .4;
-}
-
-input:focus,
-button:focus {
-    outline: none;
-}
-
-.prefs input {
-    height: 40px;
+footer {
+    position: sticky;
+    width: 100%;
     text-align: center;
-}
-
-.btn-container {
-    margin-top: 20px;
-}
-
-.manipulate-btn {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.manipulate-btn img {
-    width: 40px;
-    height: 40px;
+    background-color: #000;
+    color: #c3fe0d;
 }
 
 /* Helpers */
-
-.ml100 {
-    margin-left: 100px;
-}
 
 .flex {
     display: flex;
@@ -81,12 +75,34 @@ button:focus {
     justify-content: space-around;
 }
 
+.space-between {
+    justify-content: space-between;
+}
+
 .justify-center {
     justify-content: center;
 }
 
+
+.justify-end {
+    align-items: flex-end;
+}
+
+
+.align-center {
+    align-items: center;
+}
+
 .grid {
     display: grid;
+}
+
+.grid-col {
+    display: grid;
+}
+
+.ml100 {
+    margin-left: 100px;
 }
 
 .object-fit {

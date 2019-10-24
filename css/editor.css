@@ -1,0 +1,49 @@
+/* Buttons & Inputs */
+
+input {
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border: 1px solid darkmagenta;
+}
+
+input::placeholder {
+    color: black;
+    opacity: .4;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.prefs input {
+    height: 40px;
+    text-align: center;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.manipulate-btn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.manipulate-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Footer fix */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #c3fe0d;
+}
