@@ -9,6 +9,9 @@ body {
 /* Header */
 
 header {
+    width: 100%;
+    position: sticky;
+    top: 0;
     height: 61px;
     background-color: #9852f9;
 }
@@ -16,6 +19,7 @@ header {
 .search-box img {
     width: 15px;
     height: 15px;
+    opacity: .6;
 }
 
 .search-box input {
@@ -65,10 +69,11 @@ input {
 .gallery-item {
     margin-top: 5px;
     border-radius: 999px;
+    transition: .2s;
 }
 
 .gallery-item:hover {
-    box-shadow: 0 4px 1px 0px #4BB543;
+    box-shadow: 0 4px 1px 0px #ffd739;
 }
 
 .image-gallery img {
@@ -93,6 +98,11 @@ footer {
 
 .flex {
     display: flex;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
 }
 
 .space-around {
@@ -130,5 +140,5 @@ footer {
 }
 
 .object-fit {
-    object-fit: cover;
+    object-fit: contain;
 }
