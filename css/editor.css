@@ -1,13 +1,5 @@
 /* Buttons & Inputs */
 
-input {
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    border: 1px solid darkmagenta;
-}
-
 input::placeholder {
     color: black;
     opacity: .4;
@@ -42,8 +34,4 @@ button:focus {
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #000;
-    color: #c3fe0d;
 }

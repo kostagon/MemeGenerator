@@ -49,5 +49,6 @@ function doChangeText(newTxt) {
 }
 
 function getCurrMeme() {
-    return gMeme;
+    if (!gCurrId) document.location = "index.html";
+    else return gMeme;
 }

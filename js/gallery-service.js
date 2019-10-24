@@ -10,10 +10,6 @@ function redirectToEditor() {
     document.location = "meme-editor.html";
 }
 
-
-
-
-
 function getNumOfImages() {
     return gNumOfImgs;
 }
