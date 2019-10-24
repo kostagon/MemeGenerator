@@ -28,12 +28,12 @@
         </nav>
     </header>
 
-    <section class="meme-editor flex justify-center">
-        <canvas class="main-canvas"></canvas>
-        <div class="prefs">
+    <section class="meme-editor flex justify-center" style="touch-action: none;">
+        <canvas class="main-canvas" style="touch-action: none;"></canvas>
+        <div class="prefs" style="touch-action: none;">
             <input type="text" style="width: 100%" name="text" id="text" onkeyup="onChangeText(this.value)"
                 placeholder="Enter Text" />
-            <div class="btn-container flex space-around">
+            <div class="btn-container flex space-around" style="touch-action: none;">
                 <a class="manipulate-btn" style="touch-action: none;">
                     <img src="./images/icons/increase-font.png" data-type="increase" onclick="onManipulateText(this)" ontouch="onManipulateText(this)"
                         alt="" srcset="">
