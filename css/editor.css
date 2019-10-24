@@ -58,6 +58,14 @@ button:focus {
     display: none;
 }
 
+a.manipulate-btn {
+    text-decoration: none;
+    color: black;
+}
+a.manipulate-btn:hover {
+    color:white;
+}
+
 /* Media queries */
 
 @media(max-width:700px) {
@@ -76,6 +84,14 @@ button:focus {
     }
 
     .search-box img {
+        display: none;
+    }
+
+    .header-nav, .header-nav a {
+        margin-right: 10px;
+    }
+
+    .local-save {
         display: none;
     }
 }

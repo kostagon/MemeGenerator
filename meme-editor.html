@@ -18,7 +18,7 @@
             </a>
 
         </div>
-        <div class="search-box">
+        <div class="search-box hidden">
             <input type="search" name="search-box" id="search-box" placeholder="Search Keywords" />
             <img src="./images/icons/search-icon.png" alt="" srcset="">
         </div>
@@ -35,20 +35,20 @@
                 placeholder="Enter Text" />
             <div class="btn-container flex space-around" style="touch-action: none;">
                 <a class="manipulate-btn" style="touch-action: none;">
-                    <img src="./images/icons/increase-font.png" data-type="increase" onclick="onManipulateText(this)" ontouch="onManipulateText(this)"
-                        alt="" srcset="">
+                    <img src="./images/icons/increase-font.png" data-type="increase" onclick="onManipulateText(this)"
+                        ontouch="onManipulateText(this)" alt="" srcset="">
                 </a>
                 <a class="manipulate-btn" style="touch-action: none;">
-                    <img src="./images/icons/decrease-font.png" data-type="decrease" onclick="onManipulateText(this)" ontouch="onManipulateText(this)"
-                        alt="" srcset="">
+                    <img src="./images/icons/decrease-font.png" data-type="decrease" onclick="onManipulateText(this)"
+                        ontouch="onManipulateText(this)" alt="" srcset="">
                 </a>
                 <a class="manipulate-btn" style="touch-action: none;">
-                    <img src="./images/icons/arrows-down.png" data-type="move-down" onclick="onManipulateText(this)" ontouch="onManipulateText(this)"
-                        alt="" srcset="">
+                    <img src="./images/icons/arrows-down.png" data-type="move-down" onclick="onManipulateText(this)"
+                        ontouch="onManipulateText(this)" alt="" srcset="">
                 </a>
                 <a class="manipulate-btn" style="touch-action: none;">
-                    <img src="./images/icons/arrows-up.png" data-type="move-up" onclick="onManipulateText(this)" ontouch="onManipulateText(this)" alt=""
-                        srcset="">
+                    <img src="./images/icons/arrows-up.png" data-type="move-up" onclick="onManipulateText(this)"
+                        ontouch="onManipulateText(this)" alt="" srcset="">
                 </a>
                 <a class="manipulate-btn" style="touch-action: none;">
                     <img src="./images/icons/up-and-down-opposite-double-arrows-side-by-side.png"
@@ -57,9 +57,12 @@
             </div>
         </div>
     </section>
-    <div class="flex dl-btn align-center">
+    <div class="flex-col dl-btn align-center">
         <a href="#" class="manipulate-btn" onclick="downloadImg(this)" download="my-img.jpg"><img
-                src="./images/icons/download.png" alt="" srcset="" /></a>
+                src="./images/icons/download.png" alt="" srcset="" /><br />Download</a>
+        <a href="#" class="manipulate-btn local-save" onclick="onSaveMemeUrl(this)"><img src="./images/icons/save.png" alt=""
+                srcset="" /><br />Save locally</a>
+
     </div>
     <footer class="flex justify-center">
         <div class="logo">

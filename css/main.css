@@ -115,6 +115,10 @@ input {
     .search-box img {
         display: none;
     }
+
+    .header-nav {
+        margin-right: 10px;
+    }
 }
 
 /* Footer */

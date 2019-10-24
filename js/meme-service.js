@@ -2,6 +2,7 @@
 
 let gCurrId = localStorage.getItem('curr-img-id');
 let gIsHeightSet = false;
+let gSavedMemes = getSavedMemes();
 let gMeme = {
     selectedImgId: gCurrId,
     selectedTxtIdx: 0,
@@ -33,7 +34,6 @@ function doManipulateText(val) {
         if (gMeme.txts[gMeme.selectedTxtIdx].pos <= gCanvas.height - 5) gMeme.txts[gMeme.selectedTxtIdx].pos += 6;
         else return;
     }
-    // gMeme.txts[gMeme.selectedTxtIdx].pos += 6;
     initCanvas();
 }
 
@@ -57,13 +57,23 @@ function doChangeText(newTxt) {
     initCanvas();
 }
 
+function doSaveMeme(dataUrl) {
+    gSavedMemes.push(dataUrl);
+    localStorage.setItem('saved-memes', JSON.stringify(gSavedMemes));
+}
+
 function getCurrMeme() {
     if (!gCurrId) document.location = "index.html";
     else return gMeme;
 }
 
-function setBottomTxtHeight(val) {
+function setBottomTxtHeight() {
     if (gIsHeightSet) return;
     else gMeme.txts[1].pos = gCanvas.height - gMeme.txts[1].size / 2;
     gIsHeightSet = true;
+}
+
+function getSavedMemes() {
+    if(localStorage.getItem('saved-memes')) return localStorage.getItem(JSON.parse('saved-memes'));
+    else return [];
 }

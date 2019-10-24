@@ -4,7 +4,6 @@ let gCtx = gCanvas.getContext('2d');
 
 function initCanvas() {
     let currMeme = getCurrMeme();
-    // console.dir(gCanvas);
     let image = new Image();
     image.src = `./images/meme-images/${currMeme.selectedImgId}.jpg`;
     let currMemeTxt = currMeme.txts[currMeme.selectedTxtIdx].line;
@@ -35,11 +34,11 @@ function onChangeImage(val) {
 function renderImage(image, currMeme) {
     gCtx.drawImage(image, 0, 0);
     currMeme.txts.forEach((item) => {
-        gCtx.font = item.size + 'px Impact, Anton, Arimo';
+        gCtx.font = item.size + 'pt Impact, Anton, Arimo';
         gCtx.fillStyle = '#fff';
         gCtx.strokeStyle = '#000';
         gCtx.textAlign = 'center';
-        if(gCtx.measureText(item.line).width > gCanvas.width) {
+        if (gCtx.measureText(item.line).width > gCanvas.width) {
             document.querySelector('#text').disabled = true;
         };
         document.querySelector('#text').disabled = false;
@@ -56,6 +55,12 @@ function renderImage(image, currMeme) {
 function onChangeText(newTxt) {
     doChangeText(newTxt);
 }
+
+function onSaveMemeUrl() {
+    let memeUrl = gCanvas.toDataURL('image/jpeg');
+    doSaveMeme(memeUrl);
+};
+
 
 function downloadImg(elLink) {
     let imgContent = gCanvas.toDataURL('image/jpeg');
