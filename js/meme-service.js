@@ -23,8 +23,8 @@ let gMeme = {
 }
 
 function doManipulateText(val) {
-    if (val === 'increase') gMeme.txts[gMeme.selectedTxtIdx].size++;
-    else if (val === 'decrease') gMeme.txts[gMeme.selectedTxtIdx].size--;
+    if (val === 'increase') gMeme.txts[gMeme.selectedTxtIdx].size += 5;
+    else if (val === 'decrease') gMeme.txts[gMeme.selectedTxtIdx].size -= 5;
     if (val === 'move-up') {
         if (gMeme.txts[gMeme.selectedTxtIdx].pos - gMeme.txts[gMeme.selectedTxtIdx].size >= 0) gMeme.txts[gMeme.selectedTxtIdx].pos -= 6;
         else return;
