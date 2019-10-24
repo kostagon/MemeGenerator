@@ -4,6 +4,7 @@ let gCtx = gCanvas.getContext('2d');
 
 function initCanvas() {
     let currMeme = getCurrMeme();
+    // console.dir(gCanvas);
     let image = new Image();
     image.src = `./images/meme-images/${currMeme.selectedImgId}.jpg`;
     let currMemeTxt = currMeme.txts[currMeme.selectedTxtIdx].line;
@@ -11,6 +12,7 @@ function initCanvas() {
     image.onload = () => {
         gCanvas.width = image.width;
         gCanvas.height = image.height;
+        setBottomTxtHeight(gCanvas.height);
         renderImage(image, currMeme);
     }
 }
@@ -31,23 +33,21 @@ function onChangeImage(val) {
 }
 
 function renderImage(image, currMeme) {
-    // let selectedTxtIdx = currMeme.selectedTxtIdx;
-
     gCtx.drawImage(image, 0, 0);
-    currMeme.txts.forEach((item, idx) => {
-        let pos = item.pos;
-
-        gCtx.font = item.size + 'px impact';
+    currMeme.txts.forEach((item) => {
+        gCtx.font = item.size + 'px Impact, Anton, Arimo';
         gCtx.fillStyle = '#fff';
         gCtx.strokeStyle = '#000';
-        if (!idx) {
-            gCtx.fillText(item.line, 10, pos);
-            gCtx.strokeText(item.line, 10, pos);
-        }
-        if (idx) {
-            gCtx.fillText(item.line, 10, gCanvas.height - item.size / 2);
-            gCtx.strokeText(item.line, 10, gCanvas.height - item.size / 2);
-        }
+        gCtx.textAlign = 'center';
+        if(gCtx.measureText(item.line).width > gCanvas.width) {
+            document.querySelector('#text').disabled = true;
+        };
+        document.querySelector('#text').disabled = false;
+
+        gCtx.fillText(item.line, gCanvas.width / 2, item.pos);
+        gCtx.strokeText(item.line, gCanvas.width / 2, item.pos);
+
+
         gCtx.fill();
         gCtx.stroke();
     })
@@ -55,4 +55,9 @@ function renderImage(image, currMeme) {
 
 function onChangeText(newTxt) {
     doChangeText(newTxt);
+}
+
+function downloadImg(elLink) {
+    let imgContent = gCanvas.toDataURL('image/jpeg');
+    elLink.href = imgContent
 }

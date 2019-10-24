@@ -11,55 +11,64 @@
 </head>
 
 <body onload="initCanvas()">
-        <header class="flex space-between align-center">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./images/logo/LOGO.png" alt="" srcset="">
-                </a>
+    <header class="desktop-header space-between align-center">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo/LOGO.png" alt="" srcset="">
+            </a>
 
-            </div>
-            <nav class="header-nav">
-                <a href="index.html">Gallery</a>
-                <a href="#">About</a>
-            </nav>
-        </header>
-        <section class="meme-editor flex justify-center">
-            <canvas class="main-canvas"></canvas>
-            <div class="prefs">
-                <input type="text" style="width: 100%" name="text" id="text" onkeyup="onChangeText(this.value)" placeholder="Enter Text" />
-                <div class="btn-container flex space-around">
-                    <a class="manipulate-btn">
-                        <img src="./images/icons/increase-font.png" data-type="increase"
-                            onclick="onManipulateText(this)" alt="" srcset="">
-                    </a>
-                    <a class="manipulate-btn">
-                        <img src="./images/icons/decrease-font.png" data-type="decrease"
-                            onclick="onManipulateText(this)" alt="" srcset="">
-                    </a>
-                    <a class="manipulate-btn">
-                        <img src="./images/icons/arrows-down.png" data-type="move-down" onclick="onManipulateText(this)"
-                            alt="" srcset="">
-                    </a>
-                    <a class="manipulate-btn">
-                        <img src="./images/icons/arrows-up.png" data-type="move-up" onclick="onManipulateText(this)"
-                            alt="" srcset="">
-                    </a>
-                    <a class="manipulate-btn">
-                        <img src="./images/icons/up-and-down-opposite-double-arrows-side-by-side.png"
-                            data-type="switch-line" class="line-switcher" onclick="onManipulateLines()" alt=""
-                            srcset="">
-                    </a>
-                </div>
-            </div>
-        </section>
-        <footer class="flex justify-center">
-            <div class="logo">
-                <a href="index.html" target="_blank">
-                    <img src="./images/logo/LOGO.png" alt="" srcset="">
+        </div>
+        <div class="search-box">
+            <input type="search" name="search-box" id="search-box" placeholder="Search Keywords" />
+            <img src="./images/icons/search-icon.png" alt="" srcset="">
+        </div>
+        <nav class="header-nav">
+            <a href="index.html">Gallery</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <section class="meme-editor flex justify-center">
+        <canvas class="main-canvas"></canvas>
+        <div class="prefs">
+            <input type="text" style="width: 100%" name="text" id="text" onkeyup="onChangeText(this.value)"
+                placeholder="Enter Text" />
+            <div class="btn-container flex space-around">
+                <a class="manipulate-btn">
+                    <img src="./images/icons/increase-font.png" data-type="increase" onclick="onManipulateText(this)"
+                        alt="" srcset="">
+                </a>
+                <a class="manipulate-btn">
+                    <img src="./images/icons/decrease-font.png" data-type="decrease" onclick="onManipulateText(this)"
+                        alt="" srcset="">
+                </a>
+                <a class="manipulate-btn">
+                    <img src="./images/icons/arrows-down.png" data-type="move-down" onclick="onManipulateText(this)"
+                        alt="" srcset="">
+                </a>
+                <a class="manipulate-btn">
+                    <img src="./images/icons/arrows-up.png" data-type="move-up" onclick="onManipulateText(this)" alt=""
+                        srcset="">
+                </a>
+                <a class="manipulate-btn">
+                    <img src="./images/icons/up-and-down-opposite-double-arrows-side-by-side.png"
+                        data-type="switch-line" class="line-switcher" onclick="onManipulateLines()" alt="" srcset="">
                 </a>
             </div>
-            <div class="flex align-center"> by Kosta Goncharov &copy;</div>
-        </footer>
+        </div>
+    </section>
+    <div class="flex dl-btn align-center">
+        <a href="#" class="manipulate-btn" onclick="downloadImg(this)" download="my-img.jpg"><img
+                src="./images/icons/download.png" alt="" srcset="" /></a>
+    </div>
+    <footer class="flex justify-center">
+        <div class="logo">
+            <a href="index.html" target="_blank">
+                <img src="./images/logo/LOGO.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="flex align-center"> by Kosta Goncharov &copy;</div>
+    </footer>
 
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>

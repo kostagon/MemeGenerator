@@ -1,5 +1,7 @@
 'use strict';
+
 let gCurrId = localStorage.getItem('curr-img-id');
+let gIsHeightSet = false;
 let gMeme = {
     selectedImgId: gCurrId,
     selectedTxtIdx: 0,
@@ -23,8 +25,15 @@ let gMeme = {
 function doManipulateText(val) {
     if (val === 'increase') gMeme.txts[gMeme.selectedTxtIdx].size++;
     else if (val === 'decrease') gMeme.txts[gMeme.selectedTxtIdx].size--;
-    else if (val === 'move-up') gMeme.txts[gMeme.selectedTxtIdx].pos--;
-    else if (val === 'move-down') gMeme.txts[gMeme.selectedTxtIdx].pos++;
+    if (val === 'move-up') {
+        if (gMeme.txts[gMeme.selectedTxtIdx].pos - gMeme.txts[gMeme.selectedTxtIdx].size >= 0) gMeme.txts[gMeme.selectedTxtIdx].pos -= 6;
+        else return;
+    }
+    if (val === 'move-down') {
+        if (gMeme.txts[gMeme.selectedTxtIdx].pos <= gCanvas.height - 5) gMeme.txts[gMeme.selectedTxtIdx].pos += 6;
+        else return;
+    }
+    // gMeme.txts[gMeme.selectedTxtIdx].pos += 6;
     initCanvas();
 }
 
@@ -51,4 +60,10 @@ function doChangeText(newTxt) {
 function getCurrMeme() {
     if (!gCurrId) document.location = "index.html";
     else return gMeme;
+}
+
+function setBottomTxtHeight(val) {
+    if (gIsHeightSet) return;
+    else gMeme.txts[1].pos = gCanvas.height - gMeme.txts[1].size / 2;
+    gIsHeightSet = true;
 }

@@ -1,8 +1,8 @@
 /* Canvas */
 
 .main-canvas {
-    max-width: 30%;
-    min-width: 250px;
+    width: 30vw;
+    border: 1px solid white;
 }
 
 /* Buttons & Inputs */
@@ -22,8 +22,13 @@ button:focus {
 }
 
 .prefs input {
-    height: 40px;
+    /* height: 40px; */
+    font-size: 1.2em;
     text-align: center;
+}
+
+.hamburger-btn {
+    font-size: 1.3em;
 }
 
 .btn-container {
@@ -40,6 +45,19 @@ button:focus {
     height: 40px;
 }
 
+.dl-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.desktop-header {
+    display: flex;
+}
+
+.mobile-header {
+    display: none;
+}
+
 /* Media queries */
 
 @media(max-width:700px) {
@@ -49,16 +67,22 @@ button:focus {
         justify-content: flex-start;
     }
 
+    .main-canvas {
+        width: 50vw;
+    }
+
     .prefs {
-        margin-left: 0;
-        margin-top: 1em;
+        margin: 1em;
+    }
+
+    .search-box img {
+        display: none;
     }
 }
 
 
-/* Footer fix */
+/* Footer */
 
 footer {
-    position: fixed;
-    bottom: 0;
+    margin-top: 15px;
 }
