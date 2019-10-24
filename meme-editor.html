@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/editor.css">
 </head>
 
-<body onload="initCanvas()">
+<body onload="initCanvas()" style="touch-action: none;">
     <header class="desktop-header space-between align-center">
         <div class="logo">
             <a href="index.html">
@@ -28,7 +28,7 @@
         </nav>
     </header>
 
-    <section class="meme-editor flex justify-center" style="touch-action: none;">
+    <section class="meme-editor flex justify-center">
         <canvas class="main-canvas"></canvas>
         <div class="prefs">
             <input type="text" style="width: 100%" name="text" id="text" onkeyup="onChangeText(this.value)"
