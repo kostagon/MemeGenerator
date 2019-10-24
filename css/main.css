@@ -2,13 +2,13 @@
 
 @font-face {
     font-family: 'Anton';
-    src: url(/fonts/Anton-Regular.ttf);
+    src: url(../fonts/Anton-Regular.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Arimo';
-    src: url(/fonts/Arimo-Bold.ttf);
+    src: url(../fonts/Arimo-Bold.ttf);
 }
 
 /* Base */
