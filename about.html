@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="desktop-header space-between align-center">
+    <header class="flex space-between align-center">
         <div class="logo">
             <a href="index.html">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
@@ -26,6 +26,13 @@
             <a href="index.html">Gallery</a>
             <a href="saved-memes.html">Saved memes</a>
         </nav>
+        <span class="hamburger-btn" onclick="openMobileNav()">&#9776;</span>
+        <nav class="header-nav-mobile">
+                <ul class="nav-list">
+                    <li><a href="index.html">Gallery</a></li>
+                    <li><a href="saved-memes.html">Saved memes</a></li>
+                </ul>
+        </nav>
     </header>
 
     <section class="main-section">
@@ -36,7 +43,7 @@
             this app is made with &#x2764; for Coding Academy's 2nd sprint
         </p>
         <div class="profile-pic">
-            <img src="./images/about/me.jpg" alt="" srcset="">
+            <img src="./images/about/me.jpg" alt="Picture by Tal Michaelov&#x2764;" srcset="">
         </div>
     </section>
 
@@ -48,6 +55,7 @@
         </div>
         <div class="flex align-center"> by Kosta Goncharov &copy;</div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

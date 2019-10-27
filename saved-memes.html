@@ -11,7 +11,7 @@
 </head>
 
 <body onload="renderMemes()">
-    <header class="desktop-header space-between align-center">
+    <header class="flex space-between align-center">
         <div class="logo">
             <a href="index.html">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
@@ -25,6 +25,13 @@
         <nav class="header-nav">
             <a href="index.html">Gallery</a>
             <a href="about.html">About</a>
+        </nav>
+        <span class="hamburger-btn" onclick="openMobileNav()">&#9776;</span>
+        <nav class="header-nav-mobile">
+            <ul class="nav-list">
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -44,6 +51,7 @@
     </footer>
     <script src="js/saved-memes-service.js"></script>
     <script src="js/saved-memes-controller.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

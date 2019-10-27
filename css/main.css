@@ -17,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #9852f9;
+    box-sizing: content-box;
 }
 
 h1,
@@ -38,16 +39,46 @@ header {
     margin-bottom: 20px;
 }
 
-.desktop-header {
-    display: flex;
-}
-
-.mobile-header {
+.header-nav-mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+    border: 1px solid black;
+    direction: rtl;
+    transition: .2s;
+    width: 200px;
+    height: 99vh;
     display: none;
 }
 
+.header-nav-mobile ul {
+    list-style-type: none;
+
+}
+
+.header-nav-mobile a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.header-nav-mobile a:hover {
+    color: white;
+}
+
 .hamburger-btn {
-    font-size: 1.3em;
+    color: black;
+    font-size: 1.5em;
+    padding: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: white;
+    border: 2px solid black;
+    transition: .5s;
+    display: none;
 }
 
 .search-box img {
@@ -61,7 +92,6 @@ header {
     text-align: center;
 }
 
-.header-nav-mobile a,
 .header-nav a {
     margin-right: 30px;
     text-decoration: none;
@@ -126,6 +156,20 @@ input {
 
     .header-nav {
         margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    .header-nav a{
+        border-radius: 5px;
+        border-bottom: 1px solid black;
+        border-top: 0;
+    }
+    .header-nav a:first-child{
+        border-top: 1px solid black;
+    }
+    .hamburger-btn {
+        display: inline;
     }
 }
 

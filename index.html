@@ -10,7 +10,7 @@
 </head>
 
 <body onload="renderGallery()">
-    <header class="desktop-header space-between align-center">
+    <header class="flex space-between align-center">
         <div class="logo">
             <a href="index.html">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
@@ -24,6 +24,13 @@
             <a href="saved-memes.html">Saved memes</a>
             <a href="about.html">About</a>
         </nav>
+        <span class="hamburger-btn" onclick="openMobileNav()">&#9776;</span>
+        <nav class="header-nav-mobile">
+            <ul class="nav-list">
+                <li><a href="saved-memes.html">Saved memes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="image-gallery grid"></section>
     <footer class="flex justify-center">
@@ -36,6 +43,7 @@
     </footer>
     <script src="js/gallery-service.js"></script>
     <script src="js/gallery-controller.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

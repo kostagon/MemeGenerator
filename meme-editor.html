@@ -11,7 +11,7 @@
 </head>
 
 <body onload="initCanvas()">
-    <header class="desktop-header space-between align-center">
+    <header class="flex space-between align-center">
         <div class="logo">
             <a href="index.html">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
@@ -28,10 +28,18 @@
             <a href="saved-memes.html">Saved memes</a>
             <a href="about.html">About</a>
         </nav>
+        <span class="hamburger-btn" onclick="openMobileNav()">&#9776;</span>
+        <nav class="header-nav-mobile">
+            <ul class="nav-list">
+                <li><a href="index.html">Gallery</li>
+                <li><a href="saved-memes.html">Saved memes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="meme-editor flex justify-center" style="touch-action: none;">
-            <canvas class="main-canvas" onclick="onStartDrag(event, this)"></canvas>
+        <canvas class="main-canvas" onclick="onStartDrag(event, this)"></canvas>
         <div class="prefs">
             <input type="text" name="text" id="text" onkeyup="onChangeText(this.value)" placeholder="Enter Text" />
             <h2 class="btn-head">Preferences</h2>
@@ -62,7 +70,7 @@
             <div class="dl-btn">
                 <a href="#" class="manipulate-btn" onclick="downloadImg(this)" download="my-img.jpg"><img
                         src="./images/icons/download.png" alt="" srcset="" /><br />Download</a>
-                <a href="#" class="manipulate-btn local-save" onclick="onSaveMemeUrl(this)"><img
+                <a href="#" class="manipulate-btn" onclick="onSaveMemeUrl(this)"><img
                         src="./images/icons/save.png" alt="" srcset="" /><br />Save locally</a>
 
             </div>
@@ -81,6 +89,7 @@
 
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
