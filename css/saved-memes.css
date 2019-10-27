@@ -1,0 +1,54 @@
+/* Base */
+
+button{
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+/* Main */
+
+.gallery-item {
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.gallery-item:hover {
+    cursor: auto;
+    box-shadow: 0 0 0 0;
+}
+
+.no-memes-yet {
+    text-align: center;
+}
+
+.no-memes-yet img {
+    width: 300px;
+    height: 300px;
+}
+
+/* Modal */
+
+.modal {
+    padding: 7px;
+    text-align: center;
+}
+
+.modal-btn {
+    padding: 7px;
+    width: 15em;
+
+}
+
+
+/* Helpers */
+.visibility-hidden {
+    visibility: hidden;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}

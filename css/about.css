@@ -1,0 +1,14 @@
+
+/* main */
+
+.main-section {
+    text-align: center;
+}
+
+/* footer */
+
+footer {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}

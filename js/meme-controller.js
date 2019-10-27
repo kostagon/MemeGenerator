@@ -57,7 +57,11 @@ function onChangeText(newTxt) {
 }
 
 function onSaveMemeUrl() {
-    let memeUrl = gCanvas.toDataURL('image/jpeg');
+    let currMeme = getCurrMeme();
+    let memeUrl = {
+        id: currMeme.selectedImgId,
+        url: gCanvas.toDataURL('image/jpeg')
+    };
     doSaveMeme(memeUrl);
 };
 

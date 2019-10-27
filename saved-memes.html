@@ -7,27 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meme Generator | KG</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/saved-memes.css">
 </head>
 
-<body onload="renderGallery()">
+<body onload="renderMemes()">
     <header class="desktop-header space-between align-center">
         <div class="logo">
             <a href="index.html">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
             </a>
         </div>
-        <h2>Welcome</h2>
+        <h2>Saved memes</h2>
         <div class="search-box hidden">
             <input type="search" name="search-box" id="search-box" placeholder="Search Keywords" />
             <img src="./images/icons/search-icon.png" alt="" srcset="">
         </div>
         <nav class="header-nav">
-            <a href="saved-memes.html">Saved memes</a>
+            <a href="index.html">Gallery</a>
             <a href="about.html">About</a>
         </nav>
     </header>
+
     <section class="image-gallery grid"></section>
-    <footer class="flex justify-center">
+    <section class="no-memes-yet"></section>
+
+    <!-- <div class="modal visibility-hidden flex-col align-center">
+        <button class="modal-btn" onclick="onDownload(this)">Download</button>
+    </div> -->
+    <footer class="flex space-around">
         <div class="logo">
             <a href="index.html" target="_blank">
                 <img src="./images/logo/LOGO.png" alt="" srcset="">
@@ -35,8 +42,8 @@
         </div>
         <div class="flex align-center"> by Kosta Goncharov &copy;</div>
     </footer>
-    <script src="js/gallery-service.js"></script>
-    <script src="js/gallery-controller.js"></script>
+    <script src="js/saved-memes-service.js"></script>
+    <script src="js/saved-memes-controller.js"></script>
 </body>
 
 </html>

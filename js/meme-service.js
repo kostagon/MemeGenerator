@@ -1,21 +1,18 @@
 'use strict';
-
 let gCurrId = localStorage.getItem('curr-img-id');
-let gIsHeightSet = false;
-let gSavedMemes = getSavedMemes();
 let gMeme = {
     selectedImgId: gCurrId,
     selectedTxtIdx: 0,
     txts: [{
             line: 'Top Text',
-            size: 50,
+            size: 30,
             align: 'left',
             color: 'red',
             pos: 50
         },
         {
             line: 'Bottom Text',
-            size: 50,
+            size: 30,
             align: 'left',
             color: 'red',
             pos: 450
@@ -58,8 +55,11 @@ function doChangeText(newTxt) {
 }
 
 function doSaveMeme(dataUrl) {
-    gSavedMemes.push(dataUrl);
-    localStorage.setItem('saved-memes', JSON.stringify(gSavedMemes));
+    if(localStorage.getItem('saved-memes')) {
+        let memesArr = JSON.parse(localStorage.getItem('saved-memes'));
+        memesArr.push(dataUrl);
+        localStorage.setItem('saved-memes', JSON.stringify(memesArr));
+    }else localStorage.setItem('saved-memes', JSON.stringify([dataUrl]));
 }
 
 function getCurrMeme() {
@@ -67,13 +67,9 @@ function getCurrMeme() {
     else return gMeme;
 }
 
+let gIsHeightSet = false;
 function setBottomTxtHeight() {
     if (gIsHeightSet) return;
     else gMeme.txts[1].pos = gCanvas.height - gMeme.txts[1].size / 2;
     gIsHeightSet = true;
-}
-
-function getSavedMemes() {
-    if(localStorage.getItem('saved-memes')) return localStorage.getItem(JSON.parse('saved-memes'));
-    else return [];
 }
