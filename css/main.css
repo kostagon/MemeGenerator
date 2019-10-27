@@ -18,6 +18,7 @@ body {
     padding: 0;
     background-color: #9852f9;
     box-sizing: content-box;
+    transition: .2s;
 }
 
 h1,
@@ -37,6 +38,7 @@ header {
     height: 61px;
     background-color: #9852f9;
     margin-bottom: 20px;
+
 }
 
 .header-nav-mobile {
@@ -47,7 +49,6 @@ header {
     background-color: lightsteelblue;
     border: 1px solid black;
     direction: rtl;
-    transition: .2s;
     width: 200px;
     height: 99vh;
     display: none;
