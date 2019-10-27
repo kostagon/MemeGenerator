@@ -22,7 +22,6 @@ button:focus {
 }
 
 .prefs input {
-    /* height: 40px; */
     font-size: 1.2em;
     text-align: center;
 }
@@ -36,6 +35,7 @@ button:focus {
 }
 
 .manipulate-btn {
+    text-align: center;
     padding: 10px;
     cursor: pointer;
 }

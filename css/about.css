@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.profile-pic img{
+    width: 250px;
+    height: 250px;
+    border-radius: 999px;
+    border: 1px solid black;
+}
+
 /* footer */
 
 footer {

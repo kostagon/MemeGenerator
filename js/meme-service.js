@@ -5,14 +5,14 @@ let gMeme = {
     selectedTxtIdx: 0,
     txts: [{
             line: 'Top Text',
-            size: 30,
+            size: 50,
             align: 'left',
             color: 'red',
             pos: 50
         },
         {
             line: 'Bottom Text',
-            size: 30,
+            size: 50,
             align: 'left',
             color: 'red',
             pos: 450
@@ -27,7 +27,7 @@ function doManipulateText(val) {
         if (gMeme.txts[gMeme.selectedTxtIdx].pos - gMeme.txts[gMeme.selectedTxtIdx].size >= 0) gMeme.txts[gMeme.selectedTxtIdx].pos -= 6;
         else return;
     }
-    if (val === 'move-down') {
+    else if (val === 'move-down') {
         if (gMeme.txts[gMeme.selectedTxtIdx].pos <= gCanvas.height - 5) gMeme.txts[gMeme.selectedTxtIdx].pos += 6;
         else return;
     }
@@ -55,8 +55,9 @@ function doChangeText(newTxt) {
 }
 
 function doSaveMeme(dataUrl) {
-    if(localStorage.getItem('saved-memes')) {
-        let memesArr = JSON.parse(localStorage.getItem('saved-memes'));
+    let memes = localStorage.getItem('saved-memes')
+    if(memes) {
+        let memesArr = JSON.parse(memes);
         memesArr.push(dataUrl);
         localStorage.setItem('saved-memes', JSON.stringify(memesArr));
     }else localStorage.setItem('saved-memes', JSON.stringify([dataUrl]));

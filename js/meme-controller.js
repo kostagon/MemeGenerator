@@ -34,7 +34,8 @@ function onChangeImage(val) {
 function renderImage(image, currMeme) {
     gCtx.drawImage(image, 0, 0);
     currMeme.txts.forEach((item) => {
-        gCtx.font = item.size + 'pt Impact, Anton, Arimo';
+
+        gCtx.font = item.size + 'px Impact, Anton, Arimo';
         gCtx.fillStyle = '#fff';
         gCtx.strokeStyle = '#000';
         gCtx.textAlign = 'center';
@@ -45,11 +46,19 @@ function renderImage(image, currMeme) {
 
         gCtx.fillText(item.line, gCanvas.width / 2, item.pos);
         gCtx.strokeText(item.line, gCanvas.width / 2, item.pos);
-
-
+        // console.log(item.pos);
+        // console.log(gCanvas.height);
+        // console.log(gCtx.measureText(item.line));
         gCtx.fill();
         gCtx.stroke();
     })
+}
+
+function onStartDrag(ev) {
+
+    console.log(ev.offsetY);
+    console.log(gCanvas.height);
+    
 }
 
 function onChangeText(newTxt) {

@@ -19,7 +19,11 @@ body {
     background-color: #9852f9;
 }
 
-h1, h2, h3, a, p{
+h1,
+h2,
+h3,
+a,
+p {
     font-family: Anton, sans-serif;
 }
 
@@ -199,4 +203,9 @@ footer {
 
 .object-fit {
     object-fit: contain;
+}
+
+.btn-head {
+    text-align: center;
+    text-decoration: underline;
 }
