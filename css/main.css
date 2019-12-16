@@ -135,13 +135,13 @@ input {
 
 .gallery-item {
     border-radius: 999px;
-    border: 1px solid white;
+    border: 1px solid black;
     border-bottom: 0;
     transition: .2s;
 }
 
 .gallery-item:hover {
-    box-shadow: 0 4px 1px 0px #ffd739;
+    box-shadow: 0 4px 1px 0px #000;
 }
 
 .image-gallery img {
